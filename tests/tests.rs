@@ -1,6 +1,8 @@
 //! Test suite for the Web and headless browsers.
 
-use stellar_xdr::curr::{
+// The CAP-0084 per-cap-feature layout exposes XDR types at the crate root
+// (no `curr` module).
+use stellar_xdr::{
     Int128Parts, Int256Parts, Limits, ScVal, ScVec, UInt128Parts, UInt256Parts, VecM, WriteXdr,
 };
 
@@ -113,6 +115,7 @@ fn list_of_types() {
             "ContractExecutable",
             "ScAddressType",
             "MuxedEd25519Account",
+            "MuxedContract",
             "ScAddress",
             "ScVec",
             "ScMap",
@@ -219,6 +222,7 @@ fn list_of_types() {
             "LedgerCloseValueSignature",
             "StellarValue",
             "StellarValueExt",
+            "StellarValueProposedValue",
             "LedgerHeaderFlags",
             "LedgerHeaderExtensionV1",
             "LedgerHeaderExtensionV1Ext",
@@ -359,6 +363,8 @@ fn list_of_types() {
             "SorobanAuthorizedFunction",
             "SorobanAuthorizedInvocation",
             "SorobanAddressCredentials",
+            "SorobanDelegateSignature",
+            "SorobanAddressCredentialsWithDelegates",
             "SorobanCredentialsType",
             "SorobanCredentials",
             "SorobanAuthorizationEntry",
@@ -373,6 +379,7 @@ fn list_of_types() {
             "HashIdPreimageRevokeId",
             "HashIdPreimageContractId",
             "HashIdPreimageSorobanAuthorization",
+            "HashIdPreimageSorobanAuthorizationWithAddress",
             "MemoType",
             "Memo",
             "TimeBounds",
@@ -502,7 +509,7 @@ fn list_of_types() {
             "SerializedBinaryFuseFilter",
             "PoolId",
             "ClaimableBalanceIdType",
-            "ClaimableBalanceId"
+            "ClaimableBalanceId",
         ]
     );
 }

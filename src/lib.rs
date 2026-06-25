@@ -3,7 +3,9 @@ mod console_error_panic_hook;
 use schemars::gen::SchemaSettings;
 use std::io::Cursor;
 use std::str::FromStr;
-use stellar_xdr::curr::{Limited, Limits, Type, TypeVariant, WriteXdr};
+// The CAP-0084 per-cap-feature layout exposes XDR types at the crate root
+// (no `curr` module).
+use stellar_xdr::{Limited, Limits, Type, TypeVariant, WriteXdr};
 use wasm_bindgen::prelude::*;
 
 // This is set to mirror https://github.com/stellar/rs-soroban-env/blob/main/soroban-env-host/src/budget/limits.rs#L14
