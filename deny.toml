@@ -45,9 +45,9 @@ skip-tree = [
 unknown-registry = "deny"
 unknown-git = "deny"
 allow-registry = ["https://github.com/rust-lang/crates.io-index"]
-# SPIKE (p28-cap-0084): stellar-xdr is git-pinned to rs-stellar-xdr#549 until it
+# SPIKE (p28-cap-0084): stellar-xdr is git-pinned to rs-stellar-xdr#552 (fork) until it
 # releases on crates.io. Revert to allow-git = [] when the pin flips to version=.
-allow-git = ["https://github.com/stellar/rs-stellar-xdr"]
+allow-git = ["https://github.com/sisuresh/rs-stellar-xdr"]
 
 [sources.allow-org]
 github = []
